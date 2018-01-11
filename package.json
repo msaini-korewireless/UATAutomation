@@ -1,0 +1,16 @@
+{
+  "name": "uat-automation",
+  "version": "1.0.0",
+  "description": "Sustaining UAT automation project",
+  "main": "conf.js",
+  "scripts": {
+    "start": "protractor config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "protractor": "^5.2.2"
+  },
+  "devDependencies": {}
+}
