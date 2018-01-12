@@ -10,6 +10,6 @@ After that, we can now start up a server with `webdriver-manager start`
 5. **Running the app**. `npm start`.
 
 ## Inital Setup
-1. **Install [NodeJS](https://nodejs.org/en/)** - 
+1. **Install [NodeJS](https://nodejs.org/en/)** -Use the one labeled LTS.
 2. **Install [Git](https://git-scm.com/downloads)**
 3. **Install Protractor** - Use npm to install Protractor globally with `npm install protractor -g`
