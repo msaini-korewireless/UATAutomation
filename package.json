@@ -4,7 +4,9 @@
   "description": "Sustaining UAT automation project",
   "main": "conf.js",
   "scripts": {
-    "start": "protractor config.js"
+    "start": "protractor config.js",
+    "start-suite": "protractor config.js --suite",
+    "start-spec": "protractor config.js --specs"
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +14,7 @@
     "lodash": "^4.17.4",
     "protractor": "^5.2.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jasmine-spec-reporter": "^4.2.1"
+  }
 }

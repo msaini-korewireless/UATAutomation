@@ -1,5 +1,6 @@
 var NewRequestPage = function(){
   this.serviceTypeDropdown = element(by.id('ctl00_RightPlaceHolder_ddlSIMType'));
+  this.fromStateDropdown = element(by.id('ctl00_RightPlaceHolder_ddlFromState'));
   this.toStateDropdown = element(by.id('ctl00_RightPlaceHolder_ddlToState'));
   this.proceedButton = element(by.id('ctl00_RightPlaceHolder_btnProceed'));
   
@@ -11,7 +12,7 @@ var NewRequestPage = function(){
   
   // SIM FEATURES PAGE
   this.simFeaturesTable = element(by.id('ctl00_RightPlaceHolder_UxSimTypeFeatureGroups_ckbxListAPN/IPRelated'));
-  // ---- SIM FEATURES -----
+  // ----T-USA SIM FEATURES -----
   this.apnC1Feature = element(by.id('ctl00_RightPlaceHolder_UxSimTypeFeatureGroups_ckbxListAPN/IPRelated_0'));
   this.apnC2Feature = element(by.id('ctl00_RightPlaceHolder_UxSimTypeFeatureGroups_ckbxListAPN/IPRelated_1'));  
   this.apnGridFeature = element(by.id('ctl00_RightPlaceHolder_UxSimTypeFeatureGroups_ckbxListAPN/IPRelated_2'));
@@ -20,16 +21,22 @@ var NewRequestPage = function(){
   this.apnDynamicFeature = element(by.id('ctl00_RightPlaceHolder_UxSimTypeFeatureGroups_ckbxListAPN/IPRelated_5'));  
   this.apnPrivateStaticFeature = element(by.id('ctl00_RightPlaceHolder_UxSimTypeFeatureGroups_ckbxListAPN/IPRelated_6'));
   this.apnPublicStaticFeature = element(by.id('ctl00_RightPlaceHolder_UxSimTypeFeatureGroups_ckbxListAPN/IPRelated_7'));
-  // ---- END SIM FEATURES -----
+  // ---- END T-USA SIM FEATURES -----
+  
+  // APN DROPDOWN
+  this.apnDropdown = element(by.id('ctl00_RightPlaceHolder_UxSimTypeFeatureGroups_ddlAPN/IPRelated'));
+  
   this.simFeaturesProceedButton = element(by.id('ctl00_RightPlaceHolder_lbBottomSave'));
   
   // DEVICE CONFIRMATION PAGE
   this.confirmationEmailRadio = element(by.id('ctl00_RightPlaceHolder_rbMailAddress')); 
   this.confirmationEmailText = element(by.id('ctl00_RightPlaceHolder_txtEmailAddress'));
   this.confirmationButton = element(by.id('ctl00_RightPlaceHolder_btnSubmit'));
+  this.acknowledgeRadio = element(by.id('ctl00_RightPlaceHolder_cbNoReactivation'));
   
   // ACTIVATION CONFIRMATION PAGE
   this.trackingNumberLink = element(by.id('ctl00_RightPlaceHolder_hlRow2'));
+  
 }
 module.exports = new NewRequestPage();
 

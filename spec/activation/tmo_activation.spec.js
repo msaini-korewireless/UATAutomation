@@ -5,17 +5,12 @@ var HomePage = require('../../page_object/company/home');
 var NewRequestPage = require('../../page_object/company/new_request');
 var testHelpers = require('../../helpers/test_helpers');
 var _ = require('lodash');
-var { SID_USERNAME,
-      SID_PASSWORD,
-      COMPANY_NAME,
-      CONFIRMATION_EMAIL,
-      TMOBILE,
-      STATES } = require('../../fixtures');
 
 describe('Tmobile Activation', function() {
   var EC = protractor.ExpectedConditions;
   
   it('should login', function() {
+    let { SID_USERNAME, SID_PASSWORD } = browser.params;
     LoginPage.get();  
     LoginPage.setUsername(SID_USERNAME);
     LoginPage.setPassword(SID_PASSWORD);
@@ -23,6 +18,7 @@ describe('Tmobile Activation', function() {
   });
   
   it('should search company in welcome page', function() {
+    let { COMPANY_NAME } = browser.params;
     WelcomePage.setSearchInput(COMPANY_NAME);
     WelcomePage.clickSearch();
   });
@@ -38,6 +34,7 @@ describe('Tmobile Activation', function() {
   });
   
   it('should select T-Mobile service type', function() {
+    let { TMOBILE, STATES } = browser.params;
     NewRequestPage.serviceTypeDropdown.sendKeys(TMOBILE.NAME);    
     browser.wait(EC.elementToBeClickable(NewRequestPage.toStateDropdown), 5000);
     NewRequestPage.toStateDropdown.sendKeys(STATES.ACTIVE);
@@ -132,25 +129,21 @@ describe('Tmobile Activation', function() {
     })    
   })
   
-  it('should confirm the activation request', function() {
-    browser.wait(EC.presenceOf(NewRequestPage.confirmationEmailRadio))
-    .then(function(){
-      NewRequestPage.confirmationEmailRadio.click();
-      NewRequestPage.confirmationEmailText.sendKeys(CONFIRMATION_EMAIL);
-      NewRequestPage.confirmationButton.click();
-    })    
-  })
-  
-  it('should navigate to activation page', function() {
-    browser.wait(EC.presenceOf(NewRequestPage.trackingNumberLink))
-    .then(function(){
-      NewRequestPage.trackingNumberLink.click();
-    })
-  })
-  
-  it('should what?', function(){
-    browser.sleep(50000);
-  })
-   
+  // it('should confirm the activation request', function() {
+  //   let { CONFIRMATION_EMAIL } = browser.params;
+  //   browser.wait(EC.presenceOf(NewRequestPage.confirmationEmailRadio))
+  //   .then(function(){
+  //     NewRequestPage.confirmationEmailRadio.click();
+  //     NewRequestPage.confirmationEmailText.sendKeys(CONFIRMATION_EMAIL);
+  //     NewRequestPage.confirmationButton.click();
+  //   })    
+  // })
+  // 
+  // it('should navigate to activation page', function() {
+  //   browser.wait(EC.presenceOf(NewRequestPage.trackingNumberLink))
+  //   .then(function(){
+  //     NewRequestPage.trackingNumberLink.click();
+  //   })
+  // })
   
 });
