@@ -1,4 +1,4 @@
-# UATAutomation
+# UAT-Automation
 Sustaining Team UAT Automation project
 
 ## Getting Started
