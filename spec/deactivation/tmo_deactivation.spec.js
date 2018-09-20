@@ -12,10 +12,10 @@ var { SID_USERNAME,
       TMOBILE,
       STATES } = require('../../fixtures');
 
-describe('Tmobile Activation', function() {
+describe('TelematicsOrderSimsCCKoreTUsaR-Tmobile Activation', function() {
   var EC = protractor.ExpectedConditions;
   
-  it('should login', function() {
+  it('should login tmo', function() {
     LoginPage.get();  
     LoginPage.setUsername(SID_USERNAME);
     LoginPage.setPassword(SID_PASSWORD);

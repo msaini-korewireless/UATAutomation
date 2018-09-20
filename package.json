@@ -11,8 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "base-64": "^0.1.0",
+    "jasmine2-custom-message": "^0.9.3",
     "lodash": "^4.17.4",
-    "protractor": "^5.2.2"
+    "protractor": "^5.2.2",
+    "protractor-testrail-promise": "^1.0.2",
+    "request": "^2.88.0",
+    "sync-request": "^6.0.0",
+    "testrail-promise": "^0.1.19"
   },
   "devDependencies": {
     "jasmine-spec-reporter": "^4.2.1"

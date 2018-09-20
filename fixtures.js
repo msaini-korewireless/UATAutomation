@@ -1,5 +1,5 @@
 module.exports = {
-  SID_URL: 'http://sid.dev7.koretelematics.com',
+  SID_URL: 'http://sid.auto1.koretelematics.com',
   COMPANY_NAME: 'Smart Wireless',
   SID_USERNAME: 'siddemo',
   SID_PASSWORD: 'siddemo',
@@ -23,6 +23,7 @@ module.exports = {
     DATA_PLAN_CLASS: 'USG GPRS pay per use',
     SMS_PLAN_CLASS: 'USG SMS pay per use',
     APN: 'USG GPRS Dynamic IP C2'
-  }
+  },
+  PlanId:0
 }
 
